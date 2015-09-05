@@ -1,6 +1,6 @@
-# docker-nginx
+# Nginx-Node
 
-Minimalist Nginx image based on Alpine linux (6 MB)
+nginx and node.js in the same container
 
 ## Prerequisites
 
@@ -9,5 +9,8 @@ Minimalist Nginx image based on Alpine linux (6 MB)
 
 ## Setup
 
+    sudo sh -c "echo '127.0.0.1 app.example.com' >> /etc/hosts"
     docker-compose up
-    open http://localhost:3000
+    curl https://app.example.com -k
+    curl: (35) Unknown SSL protocol error in connection to app.example.com:443
+
