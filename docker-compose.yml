@@ -6,7 +6,7 @@ server:
     - "3000:3000"
   volumes:
   - "server:/src"
-  command: sh -c "node server.js & nginx -g 'daemon off;'"
+  command: "/usr/bin/supervisord"
   environment:
       NODE_ENV: trunk
   restart: always
