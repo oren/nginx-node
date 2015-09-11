@@ -10,4 +10,10 @@ COPY nginx/ssl/nginx.key /etc/nginx/ssl/nginx.key
 COPY server /src
 COPY supervisord.conf /etc/supervisord.conf
 
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /src/log/node.log
+RUN ln -sf /dev/stderr /src/log/node.err
+RUN ln -sf /dev/stdout /src/log/nginx.log
+RUN ln -sf /dev/stderr /src/log/nginx.err
+
 WORKDIR /src

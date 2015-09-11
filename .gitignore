@@ -1,2 +1,4 @@
 server/supervisord.pid
 server/supervisord.log
+server/log/node.*
+server/log/nginx.*
