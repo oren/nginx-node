@@ -12,5 +12,6 @@ nginx and node.js in the same container
     sudo sh -c "echo '127.0.0.1 app.example.com' >> /etc/hosts"
     docker-compose up
     curl https://app.example.com -k
-    curl: (35) Unknown SSL protocol error in connection to app.example.com:443
+    =>
+    Hello World
 
