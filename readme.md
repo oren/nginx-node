@@ -11,7 +11,9 @@ nginx and node.js in the same container
 
     sudo sh -c "echo '127.0.0.1 app.example.com' >> /etc/hosts"
     docker-compose up
+    tail -f server/log/node.log
     curl https://app.example.com -k
     =>
     Hello World
+
 
