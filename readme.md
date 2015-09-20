@@ -13,9 +13,9 @@ nginx and node.js in the same container
 sudo sh -c "echo '127.0.0.1 app.example.com' >> /etc/hosts"
 docker-compose up
 curl https://app.example.com -k
+=> Hello World
 docker exec -it nginxnode_server_1 sh
-tail -f /var/log/nginx/*
-
-[error] 6#0: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.42.1, server: app.example.com, request: "GET / HTTP/1.1", upstream: "http://[::1]:3000/", host: "app.example.com"
-[error] 6#0: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.42.1, server: app.example.com, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "app.example.com
+pkill node
+curl https://app.example.com -k
+curl: (7) Failed to connect to app.example.com port 443: Connection refused
 ```
